@@ -1,4 +1,4 @@
-<div class="beer-card-wrapper" (click)="openModal()">
+<div class="beer-card-wrapper" (click)="openBeerModal()">
     <div class="favorite-btn" (click)="onHeartClick();$event.stopPropagation()">
         <div class="heart" [ngClass]="{'is-active': isFavorite}"></div>
     </div>
@@ -6,3 +6,12 @@
     <p class="title">{{beer?.name}}</p>
     <p class="subtitle">{{beer?.tagline}}</p>
 </div>
+
+<beer-brewer-modal class="favorite-modal" [id]="'favorite-modal' + beer.id">
+    <p>Are you sure you want to remove the beer from your favorites list?</p>
+
+    <div class="buttons">
+        <button (click)="removeFromFavorite()">Yes</button>
+        <button (click)="closeModal('favorite-modal' + beer.id)">No</button>
+    </div>
+</beer-brewer-modal>

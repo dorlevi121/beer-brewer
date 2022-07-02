@@ -15,16 +15,21 @@ export class ErrorsInterceptor implements HttpInterceptor {
   constructor() { }
 
   intercept(request: HttpRequest<unknown>, next: HttpHandler): Observable<HttpEvent<unknown>> {
+    
     return next.handle(request)
       .pipe(
-        catchError((err: HttpErrorResponse) => {
+        catchError((error: HttpErrorResponse) => {
+          let errorMessage = '';
 
-          if (err.status === 401) {
+          if (error.error instanceof ErrorEvent) {
+            errorMessage = error.error.message
+          } else { 
+            errorMessage = `${error.status}\nMessage: ${error.message}`;
           }
-          else {
-          }
-
-          return throwError(err);
+ 
+          window.alert(errorMessage);
+ 
+          return throwError(errorMessage);
         }),
       );
   }
