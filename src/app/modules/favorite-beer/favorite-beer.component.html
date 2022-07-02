@@ -1,0 +1,15 @@
+<div class="favorite-beer-wrapper">
+    <div class="banner">
+        <div class="text">
+            <p class="title">
+                Your favorite <br>
+                beer
+            </p>
+            <p class="subtitle">
+                Find out which beer is ideal for <br> a special meal.
+            </p>
+        </div>
+        <img src="../../../assets/images/favorite-beer.png" alt="favorite">
+    </div>
+    <beer-brewer-beers-list [beers]="beers" (getBeers)="getBeers($event)"></beer-brewer-beers-list>
+</div>

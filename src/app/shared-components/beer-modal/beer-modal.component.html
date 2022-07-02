@@ -1,0 +1,26 @@
+<div class="beer-modal-wrapper">
+    <span class="close" (click)="closeModal()">&times;</span>
+
+    <div class="modal-top">
+        <div class="image-wrapper">
+            <img [src]="beer?.image_url" [alt]="beer.name">
+        </div>
+        <div class="content">
+            <p class="title">{{beer.name}}</p>
+            <p class="description">{{beer?.description}}</p>
+        </div>
+    </div>
+
+    <div class="details">
+        <div class="section">
+            <p>Food Pairing</p>
+            <li *ngFor="let food of beer.food_pairing">{{food}}</li>
+        </div>
+
+        <div class="section">
+            <p>Color</p>
+            <li>SRM: {{beer?.srm}}</li>
+            <li>EBC: {{beer?.ebc}}</li>
+        </div>
+    </div>
+</div>

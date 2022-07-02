@@ -1,0 +1,8 @@
+<div class="beer-card-wrapper" (click)="openModal()">
+    <div class="favorite-btn" (click)="onHeartClick();$event.stopPropagation()">
+        <div class="heart" [ngClass]="{'is-active': isFavorite}"></div>
+    </div>
+    <img class="beer-image" [src]="beer?.image_url || 'https://images.punkapi.com/v2/197.png'" [alt]="beer?.name">
+    <p class="title">{{beer?.name}}</p>
+    <p class="subtitle">{{beer?.tagline}}</p>
+</div>

@@ -1,0 +1,16 @@
+<div class="serach-beer">
+    <div class="text">
+        <p class="title">
+            Find the <br>
+            perfect beer
+        </p>
+        <p class="subtitle">
+            Find out which beer is ideal for <br> a special meal.
+        </p>
+    </div>
+    <div class="search-input">
+        <input #foodType type="text" placeholder="Food type..." (keydown.enter)="submitFood(foodType?.value || '')">
+        <img class="search-icon" src="../../../assets/icons/search-icon.png" alt="search-icon"
+            (click)="submitFood(foodType?.value || '')">
+    </div>
+</div>

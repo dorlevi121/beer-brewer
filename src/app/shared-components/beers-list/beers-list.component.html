@@ -1,0 +1,22 @@
+<div class="beers-list-wrapper">
+    <div class="beers" *ngIf="beers?.length">
+        <beer-brewer-beer-card
+            *ngFor="let beer of beers | paginate: { itemsPerPage: limit, currentPage: page, totalItems: 600 } "
+            [beer]="beer" class="beer"></beer-brewer-beer-card>
+    </div>
+
+    <pagination-controls (pageChange)="changePage($event)"></pagination-controls>
+
+    <div class="loader" *ngIf="loading">
+        <div class="lds-roller">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+</div>

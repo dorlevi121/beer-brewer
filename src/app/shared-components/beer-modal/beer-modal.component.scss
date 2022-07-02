@@ -1,0 +1,90 @@
+@import "../../../assets/style/main.scss";
+
+.beer-modal-wrapper {
+    position: relative;
+    width: 50%;
+    height: 90%;
+    margin: 0 auto;
+    background-color: $white;
+    padding: $margin-large;
+
+    & .close {
+        position: absolute;
+        right: 10px;
+        top: 0px;
+        color: #aaaaaa;
+        float: right;
+        font-size: 50px;
+        font-weight: bold;
+
+        &:hover,
+        &:focus {
+            color: #000;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    }
+
+    & .modal-top {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-around;
+
+        & .image-wrapper {
+            width: 25%;
+            height: auto;
+            padding: $margin-large;
+            background-color: $blue;
+            border-radius: 15px;
+            text-align: center;
+            margin: 0 30px 0 0;
+
+            & img {
+                height: 200px;
+                width: auto;
+            }
+        }
+
+        & .content {
+            width: 60%;
+
+            & p {
+                margin: 0;
+            }
+
+            & .title {
+                font-weight: 600;
+                font-size: $text-size-large;
+                margin-bottom: $margin-small;
+            }
+
+            & .description {
+                font-weight: 400;
+                line-height: 1.65;
+                font-size: $text-size-medium;
+            }
+        }
+    }
+
+    & .details {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-around;
+
+        & .section {
+
+            & p {
+                font-weight: 600;
+                font-size: $text-size-medium;
+                margin-bottom: $margin-small;
+            }
+
+            & li {
+                font-weight: 400;
+                line-height: 1.65;
+                font-size: $text-size-medium;
+            }
+        }
+    }
+
+}

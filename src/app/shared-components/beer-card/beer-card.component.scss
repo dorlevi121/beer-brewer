@@ -1,0 +1,72 @@
+@import "../../../assets/style/main.scss";
+
+.beer-card-wrapper {
+    z-index: 8;
+    position: relative;
+    width: 100%;
+    text-align: center;
+    padding: $margin-medium;
+    margin-bottom: $margin-small;
+    border: black solid 1px;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: background-color .2s ease-in-out;
+
+    &:hover {
+        background-color: $blue;
+
+        .favorite-btn {
+            visibility: visible;
+
+        }
+    }
+
+    & .favorite-btn {
+        z-index: 9;
+        position: absolute;
+        top: -10%;
+        left: -15%;
+
+        & .heart {
+            width: 100px;
+            height: 100px;
+            background: url("https://cssanimation.rocks/images/posts/steps/heart.png") no-repeat;
+            background-position: 0 0;
+            cursor: pointer;
+            transition: background-position 1s steps(28);
+            transition-duration: 0s;
+        }
+
+        & .is-active {
+            transition-duration: 1s;
+            background-position: -2800px 0;
+        }
+    }
+
+    & .beer-image {
+        height: 200px;
+        width: auto;
+    }
+
+    & p {
+        margin: 0;
+    }
+
+    & .title {
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+        font-weight: 600;
+        font-size: $text-size-medium;
+    }
+
+    & .subtitle {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        /* number of lines to show */
+        line-clamp: 2;
+        -webkit-box-orient: vertical;
+    }
+}

@@ -1,0 +1,6 @@
+<div class="beers-wrapper">
+    <beer-brewer-search-beer (food)="getBeers(page, $event)"></beer-brewer-search-beer>
+
+    <beer-brewer-beers-list [beers]="beers" [page]="page" (getBeers)="getBeers($event)"></beer-brewer-beers-list>
+
+</div>

@@ -1,0 +1,48 @@
+@import "../../../assets/style/main.scss";
+
+.top-navigation-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: $margin-xl 0;
+
+    & .logo {
+        display: flex;
+        align-items: center;
+        font-size: $text-size-xl;
+        color: inherit;
+        text-decoration: inherit;
+        transition: all .2s ease-in-out;
+
+        &:hover {
+            color: $brown;
+        }
+
+        & span {
+            font-weight: 500;
+        }
+
+        & img {
+            width: 50px;
+            height: auto;
+            margin-right: 5px;
+        }
+    }
+
+    & .menu {
+        display: flex;
+        align-items: center;
+
+        & .menu-item {
+            color: inherit;
+            text-decoration: inherit;
+            font-size: $text-size-medium;
+            margin-right: $margin-medium;
+            transition: all .2s ease-in-out;
+
+            &:hover {
+                color: $brown;
+            }
+        }
+    }
+}

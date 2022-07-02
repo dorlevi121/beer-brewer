@@ -1,0 +1,17 @@
+@import "../../../assets/style/main.scss";
+
+.beers-wrapper {
+
+    & .beers {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        width: 100%;
+        margin: $margin-medium 0;
+
+        & .beer {
+            width: 23%;
+            margin-right: 2%;
+        }
+    }
+}

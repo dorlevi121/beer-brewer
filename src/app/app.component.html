@@ -1,0 +1,9 @@
+<div class="app-wrapper">
+  <beer-brewer-top-navigation></beer-brewer-top-navigation>
+
+  <router-outlet></router-outlet>
+
+  <beer-brewer-footer class="footer"></beer-brewer-footer>
+</div>
+
+<beer-brewer-beer-modal class="beer-modal" *ngIf="beerModal" [beer]="beerModal"></beer-brewer-beer-modal>

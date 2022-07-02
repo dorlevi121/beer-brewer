@@ -1,0 +1,12 @@
+<div class="top-navigation-wrapper">
+    <a [routerLink]="['/']" class="logo">
+        <img src="../../../assets/images/homer.png" alt="homer">
+        Beer <span>Brewer</span>
+    </a>
+
+    <div class="menu">
+        <a *ngFor="let item of menuItems" [routerLink]="[item?.path]" class="menu-item">
+            {{item?.title}}
+        </a>
+    </div>
+</div>
