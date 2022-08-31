@@ -3,8 +3,7 @@
 I wrote a beer app.
 I used ```https://api.punkapi.com``` API to get data.
 I added an option to add beers to favorites.
-## Project URL
-https://dorlevi121.github.io/contact-list/contacts 
+
 ## How to run the project locally
 1. Install node.js, if you haven't yet. Grab the LTS release from https://nodejs.org/en/.
 2. Open a new command prompt or terminal and change to the directory where you cloned the repo. To be sure you're in the right place, make sure you can see a file named ``` package.json.```
